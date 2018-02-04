@@ -15,6 +15,9 @@
 		07BB589A2025287B009277FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BB58992025287B009277FE /* Assets.xcassets */; };
 		07BB589D2025287B009277FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BB589B2025287B009277FE /* LaunchScreen.storyboard */; };
 		07BB58AA20252B62009277FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07BB58A920252B62009277FE /* GoogleService-Info.plist */; };
+		07C59E8320274F52007C610F /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59E8220274F52007C610F /* AuthVC.swift */; };
+		07C59E8520274F88007C610F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59E8420274F88007C610F /* LoginVC.swift */; };
+		07C59E8720274FE4007C610F /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59E8620274FE4007C610F /* InsetTextField.swift */; };
 		EF95A5185523A2896405516D /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9726AA71DA067769B03CDFF2 /* Pods_BreakPoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		07BB589C2025287B009277FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07BB589E2025287B009277FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07BB58A920252B62009277FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07C59E8220274F52007C610F /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		07C59E8420274F88007C610F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		07C59E8620274FE4007C610F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		5A92A40083DD4D5F93A16D6C /* Pods-BreakPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.release.xcconfig"; sourceTree = "<group>"; };
 		9726AA71DA067769B03CDFF2 /* Pods_BreakPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA57EF1DF894F81F9FCC27FD /* Pods-BreakPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BreakPoint/Pods-BreakPoint.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +93,8 @@
 			children = (
 				07BB58922025287B009277FE /* FirstViewController.swift */,
 				07BB58942025287B009277FE /* SecondViewController.swift */,
+				07C59E8220274F52007C610F /* AuthVC.swift */,
+				07C59E8420274F88007C610F /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		07BB58A52025298C009277FE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07C59E8620274FE4007C610F /* InsetTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,9 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C59E8320274F52007C610F /* AuthVC.swift in Sources */,
 				07BB58952025287B009277FE /* SecondViewController.swift in Sources */,
+				07C59E8520274F88007C610F /* LoginVC.swift in Sources */,
 				07BB58912025287B009277FE /* AppDelegate.swift in Sources */,
 				07BB58932025287B009277FE /* FirstViewController.swift in Sources */,
+				07C59E8720274FE4007C610F /* InsetTextField.swift in Sources */,
 				073C8A58202570AB0056CDCD /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
