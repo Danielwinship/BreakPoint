@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		073C8A58202570AB0056CDCD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C8A57202570AB0056CDCD /* DataService.swift */; };
 		07BB58912025287B009277FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58902025287B009277FE /* AppDelegate.swift */; };
-		07BB58932025287B009277FE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58922025287B009277FE /* FirstViewController.swift */; };
-		07BB58952025287B009277FE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58942025287B009277FE /* SecondViewController.swift */; };
+		07BB58932025287B009277FE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58922025287B009277FE /* FeedVC.swift */; };
+		07BB58952025287B009277FE /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58942025287B009277FE /* GroupsVC.swift */; };
 		07BB58982025287B009277FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BB58962025287B009277FE /* Main.storyboard */; };
 		07BB589A2025287B009277FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BB58992025287B009277FE /* Assets.xcassets */; };
 		07BB589D2025287B009277FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BB589B2025287B009277FE /* LaunchScreen.storyboard */; };
@@ -27,8 +27,8 @@
 		073C8A57202570AB0056CDCD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		07BB588D2025287B009277FE /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BB58902025287B009277FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07BB58922025287B009277FE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		07BB58942025287B009277FE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		07BB58922025287B009277FE /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		07BB58942025287B009277FE /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
 		07BB58972025287B009277FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BB58992025287B009277FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07BB589C2025287B009277FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 		07BB58A420252973009277FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				07BB58922025287B009277FE /* FirstViewController.swift */,
-				07BB58942025287B009277FE /* SecondViewController.swift */,
+				07BB58922025287B009277FE /* FeedVC.swift */,
+				07BB58942025287B009277FE /* GroupsVC.swift */,
 				07C59E8220274F52007C610F /* AuthVC.swift */,
 				07C59E8420274F88007C610F /* LoginVC.swift */,
 			);
@@ -289,12 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C59E8320274F52007C610F /* AuthVC.swift in Sources */,
-				07BB58952025287B009277FE /* SecondViewController.swift in Sources */,
+				07BB58952025287B009277FE /* GroupsVC.swift in Sources */,
 				07C59E8520274F88007C610F /* LoginVC.swift in Sources */,
 				07C59E8B20275727007C610F /* AuthService.swift in Sources */,
 				07BB58912025287B009277FE /* AppDelegate.swift in Sources */,
 				07C59E89202752E9007C610F /* ShadowView.swift in Sources */,
-				07BB58932025287B009277FE /* FirstViewController.swift in Sources */,
+				07BB58932025287B009277FE /* FeedVC.swift in Sources */,
 				07C59E8720274FE4007C610F /* InsetTextField.swift in Sources */,
 				073C8A58202570AB0056CDCD /* DataService.swift in Sources */,
 			);
