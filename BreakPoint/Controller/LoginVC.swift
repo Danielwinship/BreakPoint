@@ -22,7 +22,27 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func signInButtonWasPressed(_ sender: Any) {
-        
+        if emailField.text != nil && passwordField.text != nil {
+            AuthService.instance.loginUser(withEmail: emailField.text!, andPassword: passwordField.text!, loginComplete: { (success, loginError) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print(loginError?.localizedDescription as Any)
+                }
+                
+                AuthService.instance.registerUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, userCreationComplete: { (success, registrationError) in
+                    if success {
+                        AuthService.instance.loginUser(withEmail: self.emailField.text!, andPassword: self.passwordField.text!, loginComplete: { (success, nil) in
+                            if success {
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        })
+                    } else {
+                        print(registrationError?.localizedDescription as Any)
+                    }
+                })
+            })
+        }
     }
     
     @IBAction func closeButtonWasPressed(_ sender: Any) {
