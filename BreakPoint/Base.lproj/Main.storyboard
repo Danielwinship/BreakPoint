@@ -168,6 +168,9 @@
                                     <constraint firstAttribute="height" constant="30" id="vgN-L6-45Q"/>
                                 </constraints>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonWasPressed:" destination="gY0-co-cUX" eventType="touchUpInside" id="sUD-12-VvJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkg-4v-Fsz">
                                 <rect key="frame" x="147" y="238" width="80" height="33"/>

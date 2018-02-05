@@ -16,12 +16,20 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        emailField.delegate = self
+        passwordField.delegate = self
+        
     }
 
     @IBAction func signInButtonWasPressed(_ sender: Any) {
+        
     }
     
-
+    @IBAction func closeButtonWasPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
+
+extension LoginVC:UITextFieldDelegate {}
