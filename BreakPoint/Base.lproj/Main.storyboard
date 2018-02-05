@@ -178,6 +178,9 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonWasPressed:" destination="gY0-co-cUX" eventType="touchUpInside" id="1BE-aa-Ric"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DNe-SA-Hug">
                                 <rect key="frame" x="30" y="78" width="315" height="140"/>
@@ -223,6 +226,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c0u-AD-sdU"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="pIO-DN-zCc" id="Aae-Z4-4Cw"/>
+                        <outlet property="passwordField" destination="Ipn-py-jBz" id="dTH-A2-Nit"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOp-Nc-U21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
