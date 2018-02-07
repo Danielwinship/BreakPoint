@@ -21,10 +21,17 @@ class CreatePostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
-       
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreatePostVC.dismissKeyboard))
+         view.addGestureRecognizer(tap)
+    }
+    
+    
+    @objc func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
 
-    
+   
     
     @IBAction func sendButtonWasPressed(_ sender: Any) {
         if textView.text != nil && textView.text != "Say something here..." {
@@ -50,7 +57,9 @@ class CreatePostVC: UIViewController {
 }
 
 extension CreatePostVC:UITextViewDelegate {
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
     }
+    
 }
