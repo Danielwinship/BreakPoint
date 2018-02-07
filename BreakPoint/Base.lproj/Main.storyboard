@@ -39,6 +39,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRC-7r-rwN">
                                         <rect key="frame" x="334" y="30" width="21" height="24"/>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="PPc-zk-HP9" kind="presentation" id="yyd-Fr-jlu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,10 +350,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-1128"/>
         </scene>
-        <!--View Controller-->
+        <!--Create PostVC-->
         <scene sceneID="6Xz-mk-2Nv">
             <objects>
-                <viewController id="PPc-zk-HP9" sceneMemberID="viewController">
+                <viewController id="PPc-zk-HP9" customClass="CreatePostVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EM9-Rr-VBh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,6 +375,7 @@
                                         <rect key="frame" x="20" y="30" width="21" height="22"/>
                                         <state key="normal" image="close"/>
                                         <connections>
+                                            <action selector="closeButtonWasPressed:" destination="PPc-zk-HP9" eventType="touchUpInside" id="FnI-rq-xt6"/>
                                             <action selector="signOutButtonWasPressed:" destination="u11-Ga-1TI" eventType="touchUpInside" id="ECP-gp-Vkh"/>
                                         </connections>
                                     </button>
@@ -411,6 +415,9 @@
                                 <state key="normal" title=" SEND" image="send">
                                     <color key="titleColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonWasPressed:" destination="PPc-zk-HP9" eventType="touchUpInside" id="2ru-lM-vi2"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Say something here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SJs-eI-r1E">
                                 <rect key="frame" x="10" y="170" width="355" height="427"/>
@@ -440,10 +447,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jZh-Qr-7aD"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="HVf-cz-IrT" id="LRO-jC-Vma"/>
+                        <outlet property="profileImage" destination="orF-fe-G2m" id="zIh-Qx-EPz"/>
+                        <outlet property="sendButton" destination="B1a-MI-8CP" id="SPm-p7-86T"/>
+                        <outlet property="textView" destination="SJs-eI-r1E" id="2da-XC-6so"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3a-jf-RJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-1853.5232383808097"/>
+            <point key="canvasLocation" x="1458" y="-321"/>
         </scene>
         <!--AuthVC-->
         <scene sceneID="wVb-3E-Hvf">
