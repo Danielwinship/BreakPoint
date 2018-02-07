@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0719A26C2029C1CA00186A4E /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719A26B2029C1CA00186A4E /* MeVC.swift */; };
 		073C8A58202570AB0056CDCD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C8A57202570AB0056CDCD /* DataService.swift */; };
 		07BB58912025287B009277FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58902025287B009277FE /* AppDelegate.swift */; };
 		07BB58932025287B009277FE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58922025287B009277FE /* FeedVC.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0719A26B2029C1CA00186A4E /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		073C8A57202570AB0056CDCD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		07BB588D2025287B009277FE /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BB58902025287B009277FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				07BB58942025287B009277FE /* GroupsVC.swift */,
 				07C59E8220274F52007C610F /* AuthVC.swift */,
 				07C59E8420274F88007C610F /* LoginVC.swift */,
+				0719A26B2029C1CA00186A4E /* MeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0719A26C2029C1CA00186A4E /* MeVC.swift in Sources */,
 				07C59E8320274F52007C610F /* AuthVC.swift in Sources */,
 				07BB58952025287B009277FE /* GroupsVC.swift in Sources */,
 				07C59E8520274F88007C610F /* LoginVC.swift in Sources */,
