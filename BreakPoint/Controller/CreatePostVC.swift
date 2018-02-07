@@ -15,6 +15,7 @@ class CreatePostVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
+    
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
@@ -26,7 +27,8 @@ class CreatePostVC: UIViewController {
     
     
     @IBAction func sendButtonWasPressed(_ sender: Any) {
-        if textView.text != nil && textView.text == "Say something here..." {
+        if textView.text != nil && textView.text != "Say something here..." {
+            
             sendButton.isEnabled = false
             DataService.instance.uploadPost(withMessage: textView.text, foUID:(Auth.auth().currentUser?.uid)! , withGroupKey: nil, sendComplete: { (isComplete) in
                 if isComplete {

@@ -451,7 +451,7 @@
                         <outlet property="emailLabel" destination="HVf-cz-IrT" id="LRO-jC-Vma"/>
                         <outlet property="profileImage" destination="orF-fe-G2m" id="zIh-Qx-EPz"/>
                         <outlet property="sendButton" destination="B1a-MI-8CP" id="SPm-p7-86T"/>
-                        <outlet property="textView" destination="SJs-eI-r1E" id="2da-XC-6so"/>
+                        <outlet property="textView" destination="SJs-eI-r1E" id="UM6-sa-QAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3a-jf-RJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
