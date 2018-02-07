@@ -10,6 +10,7 @@
 		0719A26C2029C1CA00186A4E /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719A26B2029C1CA00186A4E /* MeVC.swift */; };
 		0719A26E202B12EC00186A4E /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719A26D202B12EC00186A4E /* CreatePostVC.swift */; };
 		0719A270202BA59000186A4E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719A26F202BA59000186A4E /* FeedCell.swift */; };
+		0719A272202BC07D00186A4E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719A271202BC07D00186A4E /* Message.swift */; };
 		073C8A58202570AB0056CDCD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C8A57202570AB0056CDCD /* DataService.swift */; };
 		07BB58912025287B009277FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58902025287B009277FE /* AppDelegate.swift */; };
 		07BB58932025287B009277FE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BB58922025287B009277FE /* FeedVC.swift */; };
@@ -30,6 +31,7 @@
 		0719A26B2029C1CA00186A4E /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		0719A26D202B12EC00186A4E /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		0719A26F202BA59000186A4E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		0719A271202BC07D00186A4E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		073C8A57202570AB0056CDCD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		07BB588D2025287B009277FE /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BB58902025287B009277FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		07BB58A620252994009277FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0719A271202BC07D00186A4E /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				07BB58912025287B009277FE /* AppDelegate.swift in Sources */,
 				07C59E89202752E9007C610F /* ShadowView.swift in Sources */,
 				0719A26E202B12EC00186A4E /* CreatePostVC.swift in Sources */,
+				0719A272202BC07D00186A4E /* Message.swift in Sources */,
 				07BB58932025287B009277FE /* FeedVC.swift in Sources */,
 				07C59E8720274FE4007C610F /* InsetTextField.swift in Sources */,
 				073C8A58202570AB0056CDCD /* DataService.swift in Sources */,

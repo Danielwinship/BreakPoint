@@ -50,6 +50,9 @@ class DataService {
         }
     }
     
+    func getAllFeedMessages(handler: @escaping(_ messages: [Message])-> ()) {
+        
+    }
     
  
     
