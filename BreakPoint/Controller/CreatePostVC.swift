@@ -15,7 +15,6 @@ class CreatePostVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
-    
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
@@ -23,6 +22,11 @@ class CreatePostVC: UIViewController {
         textView.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreatePostVC.dismissKeyboard))
          view.addGestureRecognizer(tap)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.emailLabel.text = Auth.auth().currentUser?.email
     }
     
     
