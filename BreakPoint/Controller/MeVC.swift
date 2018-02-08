@@ -19,6 +19,11 @@ class MeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.emailLabel.text = Auth.auth().currentUser?.email
     }
 
