@@ -237,10 +237,16 @@
                                         <state key="normal" title="DONE">
                                             <color key="titleColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="doneButtonWasPressed:" destination="1Pu-pQ-Ief" eventType="touchUpInside" id="iUa-Jz-tBo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajf-BO-DRP">
                                         <rect key="frame" x="20" y="30" width="40" height="34"/>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeButtonWasPressed:" destination="1Pu-pQ-Ief" eventType="touchUpInside" id="40z-Gy-KG9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -342,6 +348,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="81w-4a-dJT"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="hm2-t3-EW6" id="bEJ-PN-hTZ"/>
+                        <outlet property="doneButton" destination="yq7-Sz-yg0" id="MVP-AM-DFS"/>
+                        <outlet property="emailSearchTextField" destination="4zg-bc-ttn" id="qHT-Nt-uW1"/>
+                        <outlet property="groupMemberLabel" destination="KYv-zZ-UI8" id="6Vi-hf-rq9"/>
+                        <outlet property="tableView" destination="jHt-x7-2fC" id="p57-2a-5uD"/>
+                        <outlet property="titleTextField" destination="dXp-bq-z6S" id="xCl-gV-q7A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2r-ZU-yvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
