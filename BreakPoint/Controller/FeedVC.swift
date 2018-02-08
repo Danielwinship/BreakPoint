@@ -30,13 +30,7 @@ class FeedVC: UIViewController {
 
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        DataService.instance.getAllFeedMessages { (returnedMessagesArray) in
-//                       self.messagesArray = returnedMessagesArray
-//                       self.tableView.reloadData()
-//    }
-//}
+
     
     
 }
