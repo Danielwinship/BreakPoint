@@ -21,6 +21,7 @@ class CreateGroupsVC: UIViewController {
     
     
     var emailArray = [String]()
+    var chosenArray = [String]()
     
     
     override func viewDidLoad() {
@@ -81,6 +82,13 @@ extension CreateGroupsVC:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return }
+        if !chosenArray.contains(cell.emailLabel.text!) {
+            chosenArray.append(cell.emailLabel.text!)
+            
+        }
+    }
 
 }
 
