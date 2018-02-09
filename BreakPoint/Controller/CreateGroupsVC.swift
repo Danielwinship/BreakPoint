@@ -32,6 +32,11 @@ class CreateGroupsVC: UIViewController {
         emailSearchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        doneButton.isHidden = true
+    }
 
    @objc func textFieldDidChange() {
         if emailSearchTextField.text == "" {
@@ -77,16 +82,29 @@ extension CreateGroupsVC:UITableViewDelegate,UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else {return UITableViewCell()}
         
         let profileImage = UIImage(named: "defaultProfileImage")!
-        
-        cell.configureCell(profilemage: profileImage, email: emailArray[indexPath.row], isSelected: true)
+        if chosenArray.contains(emailArray[indexPath.row]){
+                 cell.configureCell(profilemage: profileImage, email: emailArray[indexPath.row], isSelected: true)
+        } else {
+             cell.configureCell(profilemage: profileImage, email: emailArray[indexPath.row], isSelected: false)
+        }
+      
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else { return }
+        guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else { return }
         if !chosenArray.contains(cell.emailLabel.text!) {
             chosenArray.append(cell.emailLabel.text!)
-            
+            groupMemberLabel.text = chosenArray.joined(separator: ", ")
+            doneButton.isHidden = false
+        } else {
+            chosenArray = chosenArray.filter({$0 != cell.emailLabel.text! })
+            if chosenArray.count >= 1 {
+                groupMemberLabel.text = chosenArray.joined(separator: ", ")
+            } else {
+                groupMemberLabel.text = "add people to your group"
+                doneButton.isHidden = true
+            }
         }
     }
 
