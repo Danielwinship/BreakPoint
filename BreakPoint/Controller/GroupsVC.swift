@@ -33,7 +33,7 @@ extension GroupsVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell") as? GroupCell else{return}
+        guard let cell = groupTableView.dequeueReusableCell(withIdentifier: "groupCell") as? GroupCell else{return UITableViewCell()}
         cell.configureCell(title: "Test Cell", description: "Test Description", memberCount: 3)
         return cell
     }
