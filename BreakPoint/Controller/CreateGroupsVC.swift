@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateGroupsVC: UIViewController {
     
@@ -21,7 +22,7 @@ class CreateGroupsVC: UIViewController {
     
     
     var emailArray = [String]()
-    var chosenArray = [String]()
+    var chosenUserArray = [String]()
     
     
     override func viewDidLoad() {
@@ -53,6 +54,20 @@ class CreateGroupsVC: UIViewController {
     
     
     @IBAction func doneButtonWasPressed(_ sender: Any) {
+        if titleTextField.text != "" && descriptionTextField.text != "" {
+            DataService.instance.getIds(forUsernames: chosenUserArray, handler: { (idsArray) in
+                var userIds = idsArray
+                userIds.append((Auth.auth().currentUser?.uid)!)
+                
+                DataService.instance.createGroup(withTitle: self.titleTextField.text!, andDescription: self.descriptionTextField.text!, forUserIds: userIds, handler: { (groupCreated) in
+                    if groupCreated {
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        print("Group could not be created")
+                    }
+                })
+            })
+        }
         
     }
     
@@ -82,7 +97,7 @@ extension CreateGroupsVC:UITableViewDelegate,UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserCell else {return UITableViewCell()}
         
         let profileImage = UIImage(named: "defaultProfileImage")!
-        if chosenArray.contains(emailArray[indexPath.row]){
+        if chosenUserArray.contains(emailArray[indexPath.row]){
                  cell.configureCell(profilemage: profileImage, email: emailArray[indexPath.row], isSelected: true)
         } else {
              cell.configureCell(profilemage: profileImage, email: emailArray[indexPath.row], isSelected: false)
@@ -93,14 +108,14 @@ extension CreateGroupsVC:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? UserCell else { return }
-        if !chosenArray.contains(cell.emailLabel.text!) {
-            chosenArray.append(cell.emailLabel.text!)
-            groupMemberLabel.text = chosenArray.joined(separator: ", ")
+        if !chosenUserArray.contains(cell.emailLabel.text!) {
+            chosenUserArray.append(cell.emailLabel.text!)
+            groupMemberLabel.text = chosenUserArray.joined(separator: ", ")
             doneButton.isHidden = false
         } else {
-            chosenArray = chosenArray.filter({$0 != cell.emailLabel.text! })
-            if chosenArray.count >= 1 {
-                groupMemberLabel.text = chosenArray.joined(separator: ", ")
+            chosenUserArray = chosenUserArray.filter({$0 != cell.emailLabel.text! })
+            if chosenUserArray.count >= 1 {
+                groupMemberLabel.text = chosenUserArray.joined(separator: ", ")
             } else {
                 groupMemberLabel.text = "add people to your group"
                 doneButton.isHidden = true
