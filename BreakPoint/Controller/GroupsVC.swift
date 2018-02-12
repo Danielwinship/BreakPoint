@@ -40,12 +40,12 @@ extension GroupsVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groupsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = groupTableView.dequeueReusableCell(withIdentifier: "groupCell") as? GroupCell else{return UITableViewCell()}
-        cell.configureCell(title: "Test Cell", description: "Test Description", memberCount: 3)
+        cell.configureCell(title: groupsArray[indexPath.row].groupTitle, description: groupsArray[indexPath.row].groupDesc, memberCount: groupsArray.count)
         return cell
     }
 }
