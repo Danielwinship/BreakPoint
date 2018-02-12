@@ -15,7 +15,6 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var groupTitleLabel: UILabel!
     @IBOutlet weak var membersLabel: UILabel!
     @IBOutlet weak var messageTextField: InsetTextField!
-    
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var sendBtnView: UIView!
     
@@ -23,7 +22,7 @@ class GroupFeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sendBtnView.bindToKeyboard()
        
     }
 

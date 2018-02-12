@@ -24,6 +24,7 @@
 		07BB589A2025287B009277FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BB58992025287B009277FE /* Assets.xcassets */; };
 		07BB589D2025287B009277FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BB589B2025287B009277FE /* LaunchScreen.storyboard */; };
 		07BB58AA20252B62009277FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07BB58A920252B62009277FE /* GoogleService-Info.plist */; };
+		07C076262031B59E00911359 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C076252031B59E00911359 /* UIViewExt.swift */; };
 		07C59E8320274F52007C610F /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59E8220274F52007C610F /* AuthVC.swift */; };
 		07C59E8520274F88007C610F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59E8420274F88007C610F /* LoginVC.swift */; };
 		07C59E8720274FE4007C610F /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59E8620274FE4007C610F /* InsetTextField.swift */; };
@@ -53,6 +54,7 @@
 		07BB589C2025287B009277FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07BB589E2025287B009277FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07BB58A920252B62009277FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07C076252031B59E00911359 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		07C59E8220274F52007C610F /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		07C59E8420274F88007C610F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		07C59E8620274FE4007C610F /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		07BB58A7202529A7009277FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				07C076252031B59E00911359 /* UIViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				0719A270202BA59000186A4E /* FeedCell.swift in Sources */,
 				07D16021203073570036B950 /* GroupCell.swift in Sources */,
 				07BB58912025287B009277FE /* AppDelegate.swift in Sources */,
+				07C076262031B59E00911359 /* UIViewExt.swift in Sources */,
 				079DE6FA202DB126004E6DF5 /* UserCell.swift in Sources */,
 				07C59E89202752E9007C610F /* ShadowView.swift in Sources */,
 				0719A26E202B12EC00186A4E /* CreatePostVC.swift in Sources */,
