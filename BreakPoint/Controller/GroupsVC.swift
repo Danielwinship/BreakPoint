@@ -9,6 +9,8 @@
 import UIKit
 
 class GroupsVC: UIViewController {
+    
+    var groupsArray = [Group]()
 
     @IBOutlet weak var groupTableView: UITableView!
     
@@ -18,7 +20,16 @@ class GroupsVC: UIViewController {
         groupTableView.dataSource = self
     }
 
-   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllGroups { (returnedGroupsArray) in
+                self.groupsArray = returnedGroupsArray
+                self.groupTableView.reloadData()
+            }
+        }
+       
+    }
 
 
 }
