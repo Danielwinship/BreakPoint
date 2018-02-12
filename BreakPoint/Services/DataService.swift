@@ -111,4 +111,22 @@ class DataService {
     }
  
     
+    
+    func getAllGroups(handler: @escaping (_ groupsArray: [Group]) -> ()) {
+        var groupsArray = [Group]()
+        REF_GROUPS.observeSingleEvent(of: .value) { (groupSnapshot) in
+            guard let groupSnapshot = groupSnapshot.children.allObjects as? [DataSnapshot] else {return}
+            for group in groupSnapshot {
+                let memberArray = group.childSnapshot(forPath: "member").value as! [String]
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
