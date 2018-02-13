@@ -54,7 +54,7 @@ class DataService {
     
     func uploadPost(withMessage message:String, foUID uid:String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) ->()) {
         if groupKey != nil {
-            //send to groups ref
+            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content":message, "senderId":uid])
         } else {
             REF_FEED.childByAutoId().updateChildValues(["content":message, "senderId":uid])
             sendComplete(true)
@@ -75,6 +75,8 @@ class DataService {
             handler(messageArray)
         }
     }
+    
+    
     
     
     func getEmail(forSeachQuery query:String, handler: @escaping(_ emailArray:[String]) -> ()) {
