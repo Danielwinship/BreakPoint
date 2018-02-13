@@ -19,6 +19,7 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var sendBtnView: UIView!
     
     var group: Group?
+    var groupMessages = [Message]()
     
     func initData(forGroup group: Group) {
         self.group = group
@@ -29,6 +30,12 @@ class GroupFeedVC: UIViewController {
         groupTitleLabel.text = group?.groupTitle
         DataService.instance.getEmailFor(group: group!) { (returnedEmails) in
             self.membersLabel.text = returnedEmails.joined(separator: ", ")
+        }
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllMessagesFor(desiredGroup: self.group!, handler: { (returnedGroupMessages) in
+                self.groupMessages = returnedGroupMessages
+                self.tableView.reloadData()
+            })
         }
         
     }
@@ -55,3 +62,25 @@ class GroupFeedVC: UIViewController {
     }
     
 }
+
+
+extension GroupFeedVC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
