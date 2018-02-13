@@ -77,7 +77,19 @@ class DataService {
     }
     
     
-    
+    func getAllMessagesFor(desiredGroup: Group, handler: @escaping(_ messsagesArray: [Message])->()) {
+        var groupMessageArray = [Message]()
+        REF_GROUPS.child(desiredGroup.key).child("messages").observeSingleEvent(of: .value) { (groupMessageSnapshot) in
+            guard let groupMessageSnapshot = groupMessageSnapshot.children.allObjects as? [DataSnapshot] else {return}
+            for groupMessage in groupMessageSnapshot {
+                let content = groupMessage.childSnapshot(forPath: "content").value as! String
+                let senderId = groupMessage.childSnapshot(forPath: "senderId").value as! String
+                let groupMessage = Message(content: content, senderId: senderId)
+                groupMessageArray.append(groupMessage)
+            }
+            handler(groupMessageArray)
+        }
+    }
     
     func getEmail(forSeachQuery query:String, handler: @escaping(_ emailArray:[String]) -> ()) {
         var emailArray = [String]()
