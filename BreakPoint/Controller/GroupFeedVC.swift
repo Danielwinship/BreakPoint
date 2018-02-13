@@ -36,7 +36,14 @@ class GroupFeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sendBtnView.bindToKeyboard()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreatePostVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
        
+    }
+    
+    @objc func dismissKeyboard() {
+        
+        view.endEditing(true)
     }
 
     @IBAction func backButtonWasPressed(_ sender: Any) {
