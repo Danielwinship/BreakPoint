@@ -64,8 +64,25 @@ class GroupFeedVC: UIViewController {
 }
 
 
-extension GroupFeedVC
-
+extension GroupFeedVC: UITableViewDelegate,UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+      return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupMessages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell", for: indexPath) as? GroupFeedCell else {return UITableViewCell()}
+        let message = groupMessages[indexPath.row]
+        DataService.instance.getUserName(forUID: message.senderId) { (email) in
+            cell.configureCell(profileImage: UIImage(named: "defaultProfileImage")!, email: email, content: message.content)
+        }
+            return cell
+    }
+    
+}
 
 
 
