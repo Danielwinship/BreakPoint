@@ -18,7 +18,17 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var sendBtnView: UIView!
     
+    var group: Group?
     
+    func initData(forGroup group: Group) {
+        self.group = group
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        groupTitleLabel.text = group?.groupTitle
+        membersLabel.text = group?.members.joined(separator: ", ")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +41,7 @@ class GroupFeedVC: UIViewController {
     }
     
     @IBAction func sendButtonWasPressed(_ sender: Any) {
+        
     }
     
 }
