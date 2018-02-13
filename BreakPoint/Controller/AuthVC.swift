@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class AuthVC: UIViewController {
 
     override func viewDidLoad() {
@@ -27,10 +28,12 @@ class AuthVC: UIViewController {
     
     
     @IBAction func facebookSignInWasPressed(_ sender: Any) {
+        
     }
     
     
     @IBAction func googleSignInWasPressed(_ sender: Any) {
+        
     }
     
     
