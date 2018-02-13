@@ -141,7 +141,7 @@
         <!--Group FeedVC-->
         <scene sceneID="yb4-PW-vAl">
             <objects>
-                <viewController id="nlZ-cF-OZN" customClass="GroupFeedVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupFeedVC" id="nlZ-cF-OZN" customClass="GroupFeedVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcr-tr-5M1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
