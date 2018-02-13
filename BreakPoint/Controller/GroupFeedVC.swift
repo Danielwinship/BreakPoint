@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupFeedVC: UIViewController {
 
@@ -35,6 +36,11 @@ class GroupFeedVC: UIViewController {
             DataService.instance.getAllMessagesFor(desiredGroup: self.group!, handler: { (returnedGroupMessages) in
                 self.groupMessages = returnedGroupMessages
                 self.tableView.reloadData()
+                
+                if self.groupMessages.count > 0 {
+                    self.tableView.scrollToRow(at:
+                        IndexPath(row:self.groupMessages.count - 1, section: 0), at: .none, animated: true)
+                }
             })
         }
         
@@ -45,6 +51,8 @@ class GroupFeedVC: UIViewController {
         sendBtnView.bindToKeyboard()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreatePostVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        tableView.delegate = self
+        tableView.dataSource = self
        
     }
     
@@ -58,7 +66,17 @@ class GroupFeedVC: UIViewController {
     }
     
     @IBAction func sendButtonWasPressed(_ sender: Any) {
-        
+        if messageTextField.text != "" && messageTextField.text != "send a message..." {
+            messageTextField.isEnabled = false
+            sendBtn.isEnabled = false
+            DataService.instance.uploadPost(withMessage: messageTextField.text!, foUID: (Auth.auth().currentUser?.uid)!, withGroupKey: group?.key, sendComplete: { (complete) in
+                if complete {
+                    self.messageTextField.text = ""
+                    self.messageTextField.isEnabled = true
+                    self.sendBtn.isEnabled = true
+                }
+            })
+        }
     }
     
 }
